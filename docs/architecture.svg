@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 820" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <rect x="4" y="4" width="1172" height="812" rx="28" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+
+  <text x="590" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">AI Medical Chatbot — Technical Architecture</text>
+  <line x1="330" y1="56" x2="850" y2="56" stroke="#111827" stroke-width="1.5"/>
+
+  <!-- Phase 1: Browser UI (purple) -->
+  <rect x="40" y="110" width="240" height="560" rx="20" fill="#F5F0FC" stroke="#8B6CC9" stroke-width="1.5"/>
+  <rect x="40" y="110" width="240" height="34" rx="17" fill="#8B6CC9"/>
+  <text x="160" y="132" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">PHASE 1 · BROWSER UI</text>
+
+  <circle cx="160" cy="195" r="24" fill="#FFFFFF" stroke="#8B6CC9" stroke-width="1.5"/>
+  <path d="M152 186v10a8 8 0 0 0 16 0v-10" stroke="#8B6CC9" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M160 204v6" stroke="#8B6CC9" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="160" y="238" text-anchor="middle" font-size="12" fill="#374151">Voice input (mic)</text>
+
+  <circle cx="160" cy="285" r="24" fill="#FFFFFF" stroke="#8B6CC9" stroke-width="1.5"/>
+  <rect x="149" y="274" width="22" height="17" rx="2" fill="none" stroke="#8B6CC9" stroke-width="2"/>
+  <circle cx="154.5" cy="279.5" r="1.6" fill="#8B6CC9"/>
+  <path d="M150 289l5-6 4 4 5-6 5 8" stroke="#8B6CC9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="160" y="328" text-anchor="middle" font-size="12" fill="#374151">Photo upload</text>
+
+  <circle cx="160" cy="375" r="24" fill="#FFFFFF" stroke="#8B6CC9" stroke-width="1.5"/>
+  <path d="M149 368h22M149 375h22M149 382h14" stroke="#8B6CC9" stroke-width="2" stroke-linecap="round"/>
+  <text x="160" y="418" text-anchor="middle" font-size="12" fill="#374151">Text input</text>
+
+  <circle cx="160" cy="465" r="24" fill="#FFFFFF" stroke="#8B6CC9" stroke-width="1.5"/>
+  <path d="M152 476c0-9 16-9 16 0" stroke="#8B6CC9" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <circle cx="160" cy="457" r="7" fill="none" stroke="#8B6CC9" stroke-width="2.2"/>
+  <text x="160" y="508" text-anchor="middle" font-size="12" fill="#374151">Chat reply rendered</text>
+  <text x="160" y="524" text-anchor="middle" font-size="12" fill="#374151">+ audio playback</text>
+
+  <rect x="60" y="600" width="200" height="50" rx="10" fill="#FFFFFF" stroke="#D8CCEF" stroke-width="1"/>
+  <text x="160" y="620" text-anchor="middle" font-size="11" font-weight="600" fill="#5B3FA0">React 19 + Vite + Tailwind</text>
+  <text x="160" y="636" text-anchor="middle" font-size="10.5" fill="#7C6AA0">Landing (/) → Chat (/chat) · React Router</text>
+
+  <!-- Phase 2: Speech-to-Text (green) -->
+  <rect x="360" y="60" width="300" height="160" rx="20" fill="#EAF8EF" stroke="#3FA463" stroke-width="1.5"/>
+  <rect x="360" y="60" width="300" height="32" rx="16" fill="#3FA463"/>
+  <text x="510" y="81" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">PHASE 2 · SPEECH-TO-TEXT</text>
+  <rect x="380" y="106" width="110" height="40" rx="9" fill="#FFFFFF" stroke="#BFE6CC" stroke-width="1"/>
+  <text x="435" y="130" text-anchor="middle" font-size="11.5" fill="#1F5E36">Audio Recorder</text>
+  <path d="M494 126h30" stroke="#6B7280" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <rect x="528" y="106" width="112" height="40" rx="9" fill="#FFFFFF" stroke="#BFE6CC" stroke-width="1"/>
+  <text x="584" y="124" text-anchor="middle" font-size="11" fill="#1F5E36">Whisper STT</text>
+  <text x="584" y="138" text-anchor="middle" font-size="10" fill="#4B7A5B">(transcript)</text>
+  <text x="510" y="180" text-anchor="middle" font-size="11" font-weight="600" fill="#2F7D4B">Groq · whisper-large-v3-turbo</text>
+  <text x="510" y="198" text-anchor="middle" font-size="10" fill="#5C9470">free tier, no card required</text>
+
+  <!-- Phase 3: AI Reasoning (orange) -->
+  <rect x="720" y="60" width="420" height="610" rx="20" fill="#FDF1E3" stroke="#D9902F" stroke-width="1.5"/>
+  <rect x="720" y="60" width="420" height="32" rx="16" fill="#D9902F"/>
+  <text x="930" y="81" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">PHASE 3 · AI REASONING (auto-fallback)</text>
+
+  <rect x="760" y="110" width="340" height="48" rx="10" fill="#FFFFFF" stroke="#F0CE9C" stroke-width="1"/>
+  <text x="930" y="139" text-anchor="middle" font-size="12" fill="#7A4A0C">Transcribed text / typed text / photo</text>
+
+  <path d="M930 158v22" stroke="#6B7280" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="192" width="340" height="56" rx="10" fill="#FFFFFF" stroke="#F0CE9C" stroke-width="1.5"/>
+  <text x="930" y="216" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7A4A0C">1 — Groq (vision + text LLM)</text>
+  <text x="930" y="234" text-anchor="middle" font-size="10.5" fill="#9A6A2C">Llama 4 Scout · gpt-oss-20b</text>
+
+  <text x="930" y="264" text-anchor="middle" font-size="10.5" fill="#B4802A" font-style="italic">↓ if unavailable / rate-limited</text>
+
+  <rect x="760" y="276" width="340" height="56" rx="10" fill="#FFFFFF" stroke="#F0CE9C" stroke-width="1.5"/>
+  <text x="930" y="300" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7A4A0C">2 — OpenRouter (free-tier model)</text>
+  <text x="930" y="318" text-anchor="middle" font-size="10.5" fill="#9A6A2C">Nemotron · Gemma (vision)</text>
+
+  <text x="930" y="348" text-anchor="middle" font-size="10.5" fill="#B4802A" font-style="italic">↓ if unavailable</text>
+
+  <rect x="760" y="360" width="340" height="56" rx="10" fill="#FFFFFF" stroke="#F0CE9C" stroke-width="1.5"/>
+  <text x="930" y="384" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7A4A0C">3 — Local rule-based responder</text>
+  <text x="930" y="402" text-anchor="middle" font-size="10.5" fill="#9A6A2C">zero network calls · always answers</text>
+
+  <path d="M930 416v22" stroke="#6B7280" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="446" width="340" height="48" rx="10" fill="#FFFFFF" stroke="#F0CE9C" stroke-width="1"/>
+  <text x="930" y="475" text-anchor="middle" font-size="12" fill="#7A4A0C">Reply text (+ "notice" if a fallback fired)</text>
+
+  <rect x="780" y="518" width="300" height="130" rx="12" fill="#FFF8EE" stroke="#F0CE9C" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="930" y="542" text-anchor="middle" font-size="11" font-weight="700" fill="#7A4A0C">Why three tiers?</text>
+  <text x="930" y="564" text-anchor="middle" font-size="10" fill="#8A6A3A">Free-tier APIs get rate-limited</text>
+  <text x="930" y="580" text-anchor="middle" font-size="10" fill="#8A6A3A">or renamed without notice —</text>
+  <text x="930" y="596" text-anchor="middle" font-size="10" fill="#8A6A3A">this chain means the app always</text>
+  <text x="930" y="612" text-anchor="middle" font-size="10" fill="#8A6A3A">answers, verified end-to-end</text>
+  <text x="930" y="628" text-anchor="middle" font-size="10" fill="#8A6A3A">with both keys deliberately broken.</text>
+
+  <!-- Phase 4: Text-to-Speech (blue) -->
+  <rect x="360" y="590" width="300" height="160" rx="20" fill="#E9F1FC" stroke="#3E74C9" stroke-width="1.5"/>
+  <rect x="360" y="590" width="300" height="32" rx="16" fill="#3E74C9"/>
+  <text x="510" y="611" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">PHASE 4 · TEXT-TO-SPEECH (auto-fallback)</text>
+
+  <rect x="378" y="636" width="118" height="42" rx="9" fill="#FFFFFF" stroke="#C4DAF3" stroke-width="1"/>
+  <text x="437" y="655" text-anchor="middle" font-size="10.5" fill="#1E3F73">edge-tts</text>
+  <text x="437" y="669" text-anchor="middle" font-size="9.5" fill="#4A6690">(retry ×2)</text>
+  <text x="510" y="662" text-anchor="middle" font-size="10" fill="#7C93B8" font-style="italic">↓ if</text>
+  <text x="510" y="674" text-anchor="middle" font-size="10" fill="#7C93B8" font-style="italic">blocked</text>
+  <rect x="524" y="636" width="118" height="42" rx="9" fill="#FFFFFF" stroke="#C4DAF3" stroke-width="1"/>
+  <text x="583" y="661" text-anchor="middle" font-size="11" fill="#1E3F73">gTTS fallback</text>
+  <text x="510" y="716" text-anchor="middle" font-size="11" font-weight="600" fill="#2E5FA8">Neural voice per doctor (Aria / Andrew)</text>
+  <text x="510" y="734" text-anchor="middle" font-size="10" fill="#5C7BA8">both free, no API key, no billing</text>
+
+  <!-- connectors between phases -->
+  <path d="M280 210c40-30 60-60 78-88" stroke="#6B7280" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="300" y="185" font-size="10" fill="#6B7280">voice</text>
+
+  <path d="M280 400c160-10 300-60 470-232" stroke="#6B7280" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="470" y="360" font-size="10" fill="#6B7280">text / photo</text>
+
+  <path d="M660 140c30 10 55 30 100 70" stroke="#6B7280" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="672" y="128" font-size="10" fill="#6B7280">transcript</text>
+
+  <path d="M900 670c-90 10-160 10-240 5" stroke="#6B7280" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="770" y="662" font-size="10" fill="#6B7280">reply text</text>
+
+  <path d="M360 660c-30 10-55-10-80-70" stroke="#6B7280" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="245" y="585" font-size="10" fill="#6B7280">audio back to UI</text>
+
+  <text x="590" y="800" text-anchor="middle" font-size="10.5" fill="#9CA3AF">Every provider above is free — no credit card, no billing, on this account or anyone else's.</text>
+</svg>
